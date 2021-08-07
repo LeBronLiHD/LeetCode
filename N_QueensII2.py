@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+# Runtime: 90 ms, faster than 37.09% of Python3 online submissions for N-Queens II.
+# Memory Usage: 14.4 MB, less than 37.14% of Python3 online submissions for N-Queens II.
+
+ret = 0
 
 class Solution(object):
     def totalNQueens(self, N):
@@ -6,10 +10,12 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        global ret
         ret = 0
         board = [['.'] * N for _ in range(N)]
 
         def place(i: int, vert: int, ldiag: int, rdiag: int) -> None:
+            global ret
             if i == N:
                 ret += 1
                 return
