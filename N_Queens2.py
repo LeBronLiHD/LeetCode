@@ -6,6 +6,12 @@ class Solution(object):
         """
         :type n: int
         :rtype: List[List[str]]
+        Since a queen has four axes of attack, we'll need to check the three remaining axes
+         (other than the horizontal row, which our iteration will naturally take care of) for validity.
+        There are N possible columns and 2 * N - 1 possible left-downward diagonals and right-downward diagonals.
+        With a constraint of 1 <= N <= 9,
+        each of the two diagonal states represents up to 17 bits' worth of data and the vertical state up to 9 bits,
+        so we can use bit manipulation to store these states efficiently.
         """
         ans = []
         board = [['.'] * N for _ in range(N)]
