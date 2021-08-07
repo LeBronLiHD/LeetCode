@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
+# Runtime: 52 ms, faster than 49.28% of Python online submissions for N-Queens II.
+# Memory Usage: 13.8 MB, less than 9.71% of Python online submissions for N-Queens II.
 
 class Solution(object):
-    def solveNQueens(self, N: int):
+    def totalNQueens(self, N):
         """
         :type n: int
-        :rtype: List[List[str]]
-        Since a queen has four axes of attack, we'll need to check the three remaining axes
-         (other than the horizontal row, which our iteration will naturally take care of) for validity.
-        There are N possible columns and 2 * N - 1 possible left-downward diagonals and right-downward diagonals.
-        With a constraint of 1 <= N <= 9,
-        each of the two diagonal states represents up to 17 bits' worth of data and the vertical state up to 9 bits,
-        so we can use bit manipulation to store these states efficiently.
+        :rtype: int
         """
         ans = []
         board = [['.'] * N for _ in range(N)]
@@ -28,7 +24,7 @@ class Solution(object):
                 board[i][j] = '.'
 
         place(0, 0, 0, 0)
-        return ans
+        return len(ans)
 
 
 def main():
@@ -37,9 +33,8 @@ def main():
     nums = [i for i in range(1, maximum)]
     print(nums)
     for i in range(1, maximum):
-        ans = obj.solveNQueens(i)
+        ans = obj.totalNQueens(i)
         print(i, " -> ", ans)
-
 
 if __name__ == "__main__":
     main()
