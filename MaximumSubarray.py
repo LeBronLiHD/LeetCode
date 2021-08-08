@@ -10,7 +10,7 @@ class Solution(object):
         """
         size = len(nums)
         # matrix = [[0] * size for _ in range(size)]
-        max_val = -100000
+        max_val = float("-inf")
         for i in range(size):
             for j in range(i, size):
                 sum_val = 0

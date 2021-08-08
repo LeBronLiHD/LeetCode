@@ -11,7 +11,7 @@ class Solution(object):
         size = len(nums)
         # matrix = [[0] * size for _ in range(size)]
         matrix = {}
-        max_val = -100000
+        max_val = float("-inf")
         matrix[(0, 0)] = nums[0]  # init
         for i in range(size):
             for j in range(i, size):
