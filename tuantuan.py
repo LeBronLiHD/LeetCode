@@ -13,3 +13,7 @@ if __name__ == "__main__":
     size = len(nums)
     print(nums[0:int(size/2)])
     print(nums[int(size/2):size])
+    matrix = [1, 2, 3]
+    matrix.append([4, 5, 6])
+    matrix += [4, 5, 6]
+    print(matrix)
