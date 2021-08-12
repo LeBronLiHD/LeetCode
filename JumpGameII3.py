@@ -23,7 +23,6 @@ class Solution(object):
         return MinJumps
 
 
-
 def main():
     nums = [[2, 3, 1, 1, 4],
             [1, 2, 3],
