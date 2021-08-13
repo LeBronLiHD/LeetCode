@@ -12,11 +12,11 @@ class Solution(object):
         """
         size = len(nums)
         maxJump, lastIndex, MinJumps = 0, 0, 0
-        for i in range(size):
+        for i in range(size - 1):
             maxJump = max(maxJump, i + nums[i])
             # only when we have to jump one more time to jump to some specific index(position)
             # should we run: MinJumps += 1
-            if i == lastIndex and lastIndex != size - 1:
+            if i == lastIndex:
                 # index = size - 1 means we already jump to the final index
                 lastIndex = maxJump
                 MinJumps += 1
