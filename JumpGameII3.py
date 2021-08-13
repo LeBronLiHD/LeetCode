@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Your goal is to reach the last index in the minimum number of jumps.
 # dynamic programing
-# Runtime: 170 ms, faster than 42.34% of Python online submissions for Jump Game II.
-# Memory Usage: 14.3 MB, less than 70.09% of Python online submissions for Jump Game II.
+# Runtime: 170 ms, faster than 42.32% of Python online submissions for Jump Game II.
+# Memory Usage: 14.3 MB, less than 70.26% of Python online submissions for Jump Game II.
 
 class Solution(object):
     def jump(self, nums):

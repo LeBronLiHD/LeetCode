@@ -17,3 +17,5 @@ if __name__ == "__main__":
     matrix.append([4, 5, 6])
     matrix += [4, 5, 6]
     print(matrix)
+    matrix.remove(matrix[3])
+    print(matrix)
