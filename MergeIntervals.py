@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
+
 # Runtime: 132 ms, faster than 5.16% of Python online submissions for Merge Intervals.
 # Memory Usage: 15.7 MB, less than 82.82% of Python online submissions for Merge Intervals.
+
+# Runtime: 68 ms, faster than 58.14% of Python online submissions for Merge Intervals.
+# Memory Usage: 15.8 MB, less than 56.31% of Python online submissions for Merge Intervals.
 
 class Solution(object):
     def merge(self, intervals):
@@ -8,8 +12,7 @@ class Solution(object):
         :type intervals: List[List[int]]
         :rtype: List[List[int]]
         """
-        intervals.sort()
-        # print(intervals)
+        intervals.sort(key=lambda x: x[0])
         size = len(intervals)
         i = 0
         while i < size:

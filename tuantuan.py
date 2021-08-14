@@ -19,3 +19,6 @@ if __name__ == "__main__":
     print(matrix)
     matrix.remove(matrix[3])
     print(matrix)
+    one = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    two = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    print(one + two[1:len(two)])
