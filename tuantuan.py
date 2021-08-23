@@ -23,3 +23,4 @@ if __name__ == "__main__":
     two = [9, 8, 7, 6, 5, 4, 3, 2, 1]
     print(one + two[1:len(two)])
     print(str(9) + str(8))
+    print("10%3 = ", 10 % 3)
